@@ -1,0 +1,198 @@
+@import './pokedex.css';
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: fixed;
+    width: 100%;
+    height : 100%;
+    -webkit-animation: slideIn 1s;
+    animation: slideIn 1s;
+}
+
+.close {
+    color: white;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    display: flex;
+    align-items: start;
+    padding: 2px 16px;
+    color: white;
+    height: 30%;
+    position: relative;
+}
+
+.modal-body {
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    height: calc(70% - 60px);
+}
+
+.modal-footer {
+    height: 60px;
+    padding: 2px 16px;
+    color: white;
+}
+
+.modal-content .name {
+    text-transform: capitalize;
+    text-align: start;
+    width: 100%;
+    margin: .8rem;
+    font-size: 1.4rem;
+}
+
+.modal-content .types {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+.modal-content .types .type {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .7rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    
+}
+
+.modal-header .close {
+    margin: .3rem .5rem 0 0;
+}
+
+.modal-header .pokemon-img {
+    position: absolute;
+    left: 50%;
+    bottom: -22px;
+    z-index: 2;
+}
+
+.modal-header .pokemon-img img {
+    width: 200px;
+    height: auto;
+}
+
+.modal-header .header {
+    margin-top: 10px;
+}
+
+nav {
+    height: 40px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.modal-body main {
+    overflow-y: auto;
+    height: calc(100% - 40px);
+    color: 555555;
+}
+
+.modal-body main label {
+    color: #808080;
+    font-weight: 400;
+}
+
+.modal-body main #about li {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    font-size: .9rem;
+}
+
+nav ul li a {
+    color: #aaaaaa;
+    padding-bottom: 5px;
+    font-size: .9rem;
+}
+
+nav ul li:hover a {
+    color: #555555;
+    border-bottom: 1px solid #555555;
+}
+
+#about ul {
+    padding: 0;
+}
+
+/* Stats */
+
+#stats {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-content #stats .stat label {
+    width: 80px;
+    display: inline-block;
+}
+
+.stat .progress {
+    display: inline-grid;
+    width: calc(100% - 200px);
+    float: right;
+    margin-right: 20px;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {
+        right: -300px;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        right: -300px;
+    }
+
+    to {
+        right: 0;
+    }
+}

@@ -5,6 +5,7 @@
 
 body {
     background-color: #f6f8fc;
+    color: #323232;
 }
 
 .content {
@@ -12,6 +13,45 @@ body {
     height: 100vh;
     padding: 1rem;
     background-color: #fff;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: #000;
+}
+
+ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.content {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
 
 @media screen and (min-width: 992px) {
